@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/forecast_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    card_view:cardElevation="@dimen/cards_elevation"
+    android:foreground="?attr/selectableItemBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forecast_separator_size"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/cards_layout_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/forecast_image"
+            android:layout_width="@dimen/forecast_image_width"
+            android:layout_height="@dimen/forecast_image_height"
+            android:src="@drawable/default_forecast_image"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/cards_layout_text_left_padding"
+            android:paddingTop="@dimen/cards_layout_padding"
+            android:paddingBottom="@dimen/cards_layout_padding"
+            android:paddingRight="@dimen/cards_layout_padding">
+
+            <TextView
+                android:id="@+id/forecast_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimaryDark"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:lines="2"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/forecast_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/forecast_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/cards_layout_margin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/forecast_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/forecast_day_size"/>
+
+                <View
+                    android:layout_width="@dimen/forecast_day_month_separator_width"
+                    android:layout_height="@dimen/forecast_day_month_separator_height"
+                    android:layout_gravity="center"
+                    android:background="@color/line"
+                    android:layout_margin="@dimen/forecast_day_month_separator_margin"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/forecast_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="@dimen/forecast_month_text_size"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/forecast_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="@dimen/forecast_year_text_size"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forecast_week_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="@dimen/forecast_week_day_text_size"
+                android:textColor="@color/textAccent"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
